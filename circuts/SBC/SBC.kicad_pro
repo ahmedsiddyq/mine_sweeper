@@ -490,7 +490,7 @@
       "netlist": "",
       "plot": "",
       "pos_files": "",
-      "specctra_dsn": "C:/Users/moham/Desktop/SBC.dsn",
+      "specctra_dsn": "../motordriver2.dsn",
       "step": "",
       "svg": "",
       "vrml": ""
