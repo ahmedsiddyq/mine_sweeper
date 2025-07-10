@@ -9580,12 +9580,6 @@
 		(uuid "3e09fe65-d891-4458-b133-60abf75898f2")
 	)
 	(junction
-		(at 721.2678 156.1348)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "3f4989db-26d5-4b58-9f90-5aef59a0e564")
-	)
-	(junction
 		(at 797.9049 305.849)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -9958,6 +9952,12 @@
 		(uuid "6c7ef8cb-5bb9-4a70-9a8a-c867d84a6abd")
 	)
 	(junction
+		(at 379.3772 77.9119)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6dca0844-0333-48ac-bf39-008fe9383701")
+	)
+	(junction
 		(at 58.6494 164.9848)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -10034,12 +10034,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "75f7cdf9-7a54-4015-a1d3-3ff8a2f3fe27")
-	)
-	(junction
-		(at 445.959 203.3316)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "7787f7fb-091e-47db-bd2e-87944768c690")
 	)
 	(junction
 		(at 284.5577 217.6476)
@@ -10576,6 +10570,12 @@
 		(uuid "b7713ee0-b4ef-4bd1-972e-8e316156932c")
 	)
 	(junction
+		(at 386.8653 68.4941)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b80e6a43-c57b-46f0-87e8-cdec51545b4c")
+	)
+	(junction
 		(at 841.4039 230.5215)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -10670,12 +10670,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c017f236-99c7-45ef-9a89-dcd5aa3d409b")
-	)
-	(junction
-		(at 721.2678 168.6109)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c24a7a23-23d3-4775-8371-22329cafb940")
 	)
 	(junction
 		(at 199.2365 281.9395)
@@ -10922,12 +10916,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "dd404009-be3a-48d0-aa2f-a04e0a5c1f3f")
-	)
-	(junction
-		(at 712.6877 150.9788)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ded2e1bb-febb-4ce8-b26a-bee1abbcf327")
 	)
 	(junction
 		(at 784.0883 251.252)
@@ -11247,7 +11235,7 @@
 	)
 	(wire
 		(pts
-			(xy 721.2678 156.1348) (xy 714.8992 156.1348)
+			(xy 714.8992 156.1348) (xy 722.4445 156.1348)
 		)
 		(stroke
 			(width 0)
@@ -12377,16 +12365,6 @@
 	)
 	(wire
 		(pts
-			(xy 452.2057 203.3316) (xy 445.959 203.3316)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "178dbe51-0988-48e3-b2c3-024ea0806688")
-	)
-	(wire
-		(pts
 			(xy 515.5974 106.515) (xy 534.7285 106.515)
 		)
 		(stroke
@@ -12814,6 +12792,16 @@
 			(type default)
 		)
 		(uuid "1f31cd33-ee4f-48b3-806b-6dbba8a807fc")
+	)
+	(wire
+		(pts
+			(xy 386.8653 77.9119) (xy 379.3772 77.9119)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1f417c66-8a9a-4ebb-8f27-1e23889c0ef6")
 	)
 	(wire
 		(pts
@@ -13457,6 +13445,16 @@
 	)
 	(wire
 		(pts
+			(xy 452.2057 203.3671) (xy 452.2057 203.3316)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2a30f5c6-5409-4ecd-8db3-7534ee36f125")
+	)
+	(wire
+		(pts
 			(xy 225.6119 387.4707) (xy 225.6119 386.2508)
 		)
 		(stroke
@@ -13754,16 +13752,6 @@
 			(type default)
 		)
 		(uuid "2f420de8-e959-4c9e-8813-9d4ab0775a59")
-	)
-	(wire
-		(pts
-			(xy 436.2799 203.3316) (xy 436.2799 203.3511)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2f44d78f-7f6a-442c-842d-0be3300451dc")
 	)
 	(wire
 		(pts
@@ -14157,16 +14145,6 @@
 	)
 	(wire
 		(pts
-			(xy 436.2799 203.3511) (xy 431.2637 203.3511)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3651eabd-307b-4f59-9097-c26a29c4b90c")
-	)
-	(wire
-		(pts
 			(xy 950.4506 131.0837) (xy 950.4506 123.8527)
 		)
 		(stroke
@@ -14307,23 +14285,13 @@
 	)
 	(wire
 		(pts
-			(xy 380.8696 68.4979) (xy 380.8696 68.454)
+			(xy 380.8696 68.4979) (xy 380.8696 68.4941)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "38b739ea-ff90-4f5d-85b3-2d54ad42609d")
-	)
-	(wire
-		(pts
-			(xy 740.5274 168.7651) (xy 721.2678 168.7651)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "38d23247-86b6-42ab-b0fc-1a82af661f05")
 	)
 	(wire
 		(pts
@@ -14694,16 +14662,6 @@
 			(type default)
 		)
 		(uuid "3fb52447-6a60-49ba-915c-552973dfc35c")
-	)
-	(wire
-		(pts
-			(xy 721.2678 168.7651) (xy 721.2678 168.6109)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3fc194bd-5e78-4084-8d30-4f39a39d017c")
 	)
 	(wire
 		(pts
@@ -15437,6 +15395,16 @@
 	)
 	(wire
 		(pts
+			(xy 386.8653 68.4941) (xy 399.8058 68.4941)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4ad66ff0-7f9b-4a68-921c-2548de36f01a")
+	)
+	(wire
+		(pts
 			(xy 57.4124 207.3279) (xy 57.4124 205.6555)
 		)
 		(stroke
@@ -15727,16 +15695,6 @@
 	)
 	(wire
 		(pts
-			(xy 712.6877 159.3602) (xy 712.6877 150.9788)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4feb37f8-b66c-4a2b-a25a-c32281dc32a8")
-	)
-	(wire
-		(pts
 			(xy 251.1813 418.1531) (xy 259.4014 418.1531)
 		)
 		(stroke
@@ -15787,6 +15745,16 @@
 	)
 	(wire
 		(pts
+			(xy 88.5284 93.2695) (xy 88.5284 95.2451)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "50765248-30b4-41ce-af7a-e8a0acc0986e")
+	)
+	(wire
+		(pts
 			(xy 747.3956 267.9627) (xy 747.3956 272.2951)
 		)
 		(stroke
@@ -15804,6 +15772,16 @@
 			(type default)
 		)
 		(uuid "50e1d434-770d-42e3-8394-39a66da9b072")
+	)
+	(wire
+		(pts
+			(xy 88.5284 81.9186) (xy 88.4744 81.9186)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5113a224-c8a6-40a4-bbe7-ee2c55b0bd19")
 	)
 	(wire
 		(pts
@@ -15984,16 +15962,6 @@
 			(type default)
 		)
 		(uuid "546e4c6d-576b-440f-9f34-0f3928e13f08")
-	)
-	(wire
-		(pts
-			(xy 721.2678 168.6109) (xy 712.6877 168.6109)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "54f45a99-a1db-46ff-9004-161ea29fe786")
 	)
 	(wire
 		(pts
@@ -16547,7 +16515,7 @@
 	)
 	(wire
 		(pts
-			(xy 719.501 150.9788) (xy 712.6877 150.9788)
+			(xy 705.36 150.9788) (xy 719.501 150.9788)
 		)
 		(stroke
 			(width 0)
@@ -16734,6 +16702,16 @@
 			(type default)
 		)
 		(uuid "62c67b44-e0fa-48e2-85fd-c2a313a15ee4")
+	)
+	(wire
+		(pts
+			(xy 386.8653 77.2338) (xy 386.8653 77.9119)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "62d0d15f-945c-4ebe-8cbe-78427eca10f9")
 	)
 	(wire
 		(pts
@@ -17064,16 +17042,6 @@
 			(type default)
 		)
 		(uuid "678f8772-b7f6-4e01-ae30-4aac5bd22539")
-	)
-	(wire
-		(pts
-			(xy 712.6877 166.9802) (xy 712.6877 168.6109)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "67b88ce4-2ec7-4899-b8a4-7f6ea55304bd")
 	)
 	(wire
 		(pts
@@ -18757,6 +18725,16 @@
 	)
 	(wire
 		(pts
+			(xy 431.2637 203.3671) (xy 431.2637 203.3511)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8a8e285a-313b-4f13-b314-6bf96c4420c1")
+	)
+	(wire
+		(pts
 			(xy 106.8981 430.1525) (xy 106.8981 428.9974)
 		)
 		(stroke
@@ -19547,7 +19525,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.6439 95.2451) (xy 89.5814 95.2451)
+			(xy 88.5284 95.2451) (xy 89.5814 95.2451)
 		)
 		(stroke
 			(width 0)
@@ -19884,6 +19862,16 @@
 			(type default)
 		)
 		(uuid "9d5a584c-9c2e-4461-b774-e034b652d27b")
+	)
+	(wire
+		(pts
+			(xy 88.4744 81.9186) (xy 88.4744 80.5555)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9de69ccc-14fa-4c2c-8da3-23910e32212a")
 	)
 	(wire
 		(pts
@@ -20384,16 +20372,6 @@
 			(type default)
 		)
 		(uuid "a5464934-bc3b-4523-aff1-532154ff0c0f")
-	)
-	(wire
-		(pts
-			(xy 722.4445 156.1348) (xy 721.2678 156.1348)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a58bce9d-f36d-443c-9a19-6a58e5b5d896")
 	)
 	(wire
 		(pts
@@ -20997,16 +20975,6 @@
 	)
 	(wire
 		(pts
-			(xy 445.959 203.3316) (xy 436.2799 203.3316)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b241bdc5-0b41-4a11-98d5-5b04e7a99ce6")
-	)
-	(wire
-		(pts
 			(xy 436.7611 292.2007) (xy 429.689 292.2007)
 		)
 		(stroke
@@ -21244,6 +21212,16 @@
 			(type default)
 		)
 		(uuid "b56d377d-fe1f-4442-8fb2-533bb273394a")
+	)
+	(wire
+		(pts
+			(xy 386.8653 69.6138) (xy 386.8653 68.4941)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b592fd47-90b5-49b0-9ff8-bedac6a8d107")
 	)
 	(wire
 		(pts
@@ -22397,7 +22375,7 @@
 	)
 	(wire
 		(pts
-			(xy 380.8696 68.454) (xy 381.9227 68.454)
+			(xy 380.8696 68.4941) (xy 386.8653 68.4941)
 		)
 		(stroke
 			(width 0)
@@ -22494,16 +22472,6 @@
 			(type default)
 		)
 		(uuid "cb214290-a8b8-4b5d-865d-d4bdad3056e6")
-	)
-	(wire
-		(pts
-			(xy 721.2678 168.6109) (xy 721.2678 163.7548)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cb62ebbd-5078-4385-ab56-380ee7dd3c31")
 	)
 	(wire
 		(pts
@@ -22987,6 +22955,16 @@
 	)
 	(wire
 		(pts
+			(xy 436.5806 203.3671) (xy 431.2637 203.3671)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d321ca3d-98a2-40a3-819d-e0826102fbbf")
+	)
+	(wire
+		(pts
 			(xy 122.2248 394.7231) (xy 128.3159 394.7231)
 		)
 		(stroke
@@ -23187,7 +23165,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.6439 87.2234) (xy 88.6439 95.2451)
+			(xy 88.5284 81.9186) (xy 88.5284 83.1095)
 		)
 		(stroke
 			(width 0)
@@ -24357,16 +24335,6 @@
 	)
 	(wire
 		(pts
-			(xy 712.6877 150.9788) (xy 705.36 150.9788)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "eb5298c2-f852-494a-b88d-6192ea7a8d00")
-	)
-	(wire
-		(pts
 			(xy 290.779 207.2489) (xy 289.6053 207.2489)
 		)
 		(stroke
@@ -24704,6 +24672,16 @@
 			(type default)
 		)
 		(uuid "f15028e1-1107-4773-9a5c-2d91f48e6171")
+	)
+	(wire
+		(pts
+			(xy 446.7406 203.3671) (xy 452.2057 203.3671)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f180bd1c-629d-4944-9f0d-9047d76a13d5")
 	)
 	(wire
 		(pts
@@ -25788,7 +25766,7 @@
 	)
 	(global_label "3.3V"
 		(shape output)
-		(at 88.6439 87.2234 90)
+		(at 88.4744 80.5555 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -25798,7 +25776,7 @@
 		)
 		(uuid "0a7a1c19-3d2e-4876-8286-6bc89c0ab3b6")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 88.6439 80.6096 90)
+			(at 88.4744 73.9417 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -28299,7 +28277,7 @@
 	)
 	(global_label "9v+"
 		(shape output)
-		(at 381.9227 68.454 0)
+		(at 399.8058 68.4941 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -28309,7 +28287,7 @@
 		)
 		(uuid "70b41388-c801-45d3-85f2-672937ef0455")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 388.6574 68.454 0)
+			(at 406.5405 68.4941 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -28861,28 +28839,6 @@
 		(uuid "84468b02-1a22-4009-b179-cee94e632dbf")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 162.0037 319.1103 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "3.3V"
-		(shape input)
-		(at 740.5274 168.7651 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "8446c876-603e-4e55-b0f7-67f16d4062d2")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 747.625 168.7651 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -31406,76 +31362,6 @@
 			(project "SBC"
 				(path "/deb7f9ba-b41e-497b-9625-f0e1fd12358a"
 					(reference "R122")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 721.2678 159.9448 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "04eb3d4a-6ad1-4c4d-b5fb-68cee305f371")
-		(property "Reference" "R44"
-			(at 718.93 161.2149 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "10k"
-			(at 718.93 158.6749 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 719.4898 159.9448 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 721.2678 159.9448 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 721.2678 159.9448 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "d0b4c54c-38b8-43b6-be6e-0623cf94ce28")
-		)
-		(pin "1"
-			(uuid "a346c3fd-9d24-4905-96ad-64c81b104020")
-		)
-		(instances
-			(project "SBC"
-				(path "/deb7f9ba-b41e-497b-9625-f0e1fd12358a"
-					(reference "R44")
 					(unit 1)
 				)
 			)
@@ -36466,7 +36352,7 @@
 	)
 	(symbol
 		(lib_id "dk_Diodes-Rectifiers-Single:1N4004-T_NRND")
-		(at 440.879 203.3316 180)
+		(at 441.6606 203.3671 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -36474,7 +36360,7 @@
 		(dnp no)
 		(uuid "2e47f6b7-949f-46a8-8111-edb882c3eac8")
 		(property "Reference" "D61"
-			(at 440.879 205.8716 0)
+			(at 441.6606 205.9071 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -36482,7 +36368,7 @@
 			)
 		)
 		(property "Value" "1N4004-T_NRND"
-			(at 440.879 200.7916 0)
+			(at 441.6606 200.8271 0)
 			(show_name yes)
 			(effects
 				(font
@@ -36492,7 +36378,7 @@
 			)
 		)
 		(property "Footprint" "Diode_SMD:D_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
-			(at 450.0007 199.9122 0)
+			(at 450.7823 199.9477 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -36502,7 +36388,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/ds28002.pdf"
-			(at 435.799 210.9516 0)
+			(at 436.5806 210.9871 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -36512,7 +36398,7 @@
 			)
 		)
 		(property "Description" "DIODE GEN PURP 400V 1A DO41"
-			(at 440.9273 211.7256 0)
+			(at 441.7089 211.7611 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -36521,7 +36407,7 @@
 			)
 		)
 		(property "Digi-Key_PN" "1N4004DICT-ND"
-			(at 435.799 213.4916 0)
+			(at 436.5806 213.5271 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -36531,7 +36417,7 @@
 			)
 		)
 		(property "MPN" "1N4004-T"
-			(at 435.799 216.0316 0)
+			(at 436.5806 216.0671 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -36541,7 +36427,7 @@
 			)
 		)
 		(property "Category" "Discrete Semiconductor Products"
-			(at 435.799 218.5716 0)
+			(at 436.5806 218.6071 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -36551,7 +36437,7 @@
 			)
 		)
 		(property "Family" "Diodes - Rectifiers - Single"
-			(at 435.799 221.1116 0)
+			(at 436.5806 221.1471 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -36561,7 +36447,7 @@
 			)
 		)
 		(property "DK_Datasheet_Link" "https://www.diodes.com/assets/Datasheets/ds28002.pdf"
-			(at 435.799 223.6516 0)
+			(at 436.5806 223.6871 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -36571,7 +36457,7 @@
 			)
 		)
 		(property "DK_Detail_Page" "/product-detail/en/diodes-incorporated/1N4004-T/1N4004DICT-ND/160593"
-			(at 435.799 226.1916 0)
+			(at 436.5806 226.2271 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -36581,7 +36467,7 @@
 			)
 		)
 		(property "Description_1" "DIODE GEN PURP 400V 1A DO41"
-			(at 435.799 228.7316 0)
+			(at 436.5806 228.7671 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -36591,7 +36477,7 @@
 			)
 		)
 		(property "Manufacturer" "Diodes Incorporated"
-			(at 435.799 231.2716 0)
+			(at 436.5806 231.3071 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -36601,7 +36487,7 @@
 			)
 		)
 		(property "Status" "Not For New Designs"
-			(at 435.799 233.8116 0)
+			(at 436.5806 233.8471 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -53261,16 +53147,16 @@
 			(uuid "90d44386-47f9-4281-9a7b-9f2c6e92386d")
 		)
 		(pin "7"
-			(uuid "cfe17e4a-a1d6-49dc-ba4f-caf9140d2345")
+			(uuid "cfe17e4a-a1d6-49dc-ba4f-caf9140d2346")
 		)
 		(pin "5"
-			(uuid "e1511933-650a-4822-a237-39b42b721279")
+			(uuid "e1511933-650a-4822-a237-39b42b72127a")
 		)
 		(pin "3"
 			(uuid "1248387b-6229-4ef9-957a-de8ce070da16")
 		)
 		(pin "6"
-			(uuid "c5757298-a05c-40a0-b5da-74f71d53970a")
+			(uuid "c5757298-a05c-40a0-b5da-74f71d53970b")
 		)
 		(pin "8"
 			(uuid "b694c5a4-8196-43fa-82a3-b0074d7aa1a7")
@@ -58716,6 +58602,167 @@
 		)
 	)
 	(symbol
+		(lib_id "dk_Diodes-Rectifiers-Single:1N4004-T_NRND")
+		(at 88.5284 88.1895 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "bb56c700-cc16-4629-9cde-bc83d71795f4")
+		(property "Reference" "D6"
+			(at 85.9884 88.1895 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "1N4004-T_NRND"
+			(at 91.0684 88.1895 0)
+			(show_name yes)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
+			(at 91.9478 97.3112 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/ds28002.pdf"
+			(at 80.9084 83.1095 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "DIODE GEN PURP 400V 1A DO41"
+			(at 80.1344 88.2378 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digi-Key_PN" "1N4004DICT-ND"
+			(at 78.3684 83.1095 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "MPN" "1N4004-T"
+			(at 75.8284 83.1095 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Category" "Discrete Semiconductor Products"
+			(at 73.2884 83.1095 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Family" "Diodes - Rectifiers - Single"
+			(at 70.7484 83.1095 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "DK_Datasheet_Link" "https://www.diodes.com/assets/Datasheets/ds28002.pdf"
+			(at 68.2084 83.1095 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "DK_Detail_Page" "/product-detail/en/diodes-incorporated/1N4004-T/1N4004DICT-ND/160593"
+			(at 65.6684 83.1095 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description_1" "DIODE GEN PURP 400V 1A DO41"
+			(at 63.1284 83.1095 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Diodes Incorporated"
+			(at 60.5884 83.1095 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Status" "Not For New Designs"
+			(at 58.0484 83.1095 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "5ae0c6d1-fc5b-4a20-bd4d-991f1e49c085")
+		)
+		(pin "1"
+			(uuid "5ed961e4-d149-4d3b-809a-5732d06dc704")
+		)
+		(instances
+			(project "SBC"
+				(path "/deb7f9ba-b41e-497b-9625-f0e1fd12358a"
+					(reference "D6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 221.197 433.8595 0)
 		(unit 1)
@@ -63065,7 +63112,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 351.1032 73.3148 0)
+		(at 386.8653 73.4238 0)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -63074,7 +63121,7 @@
 		(dnp no)
 		(uuid "d9c7182c-b5d8-478e-846a-3fbdf3c020bc")
 		(property "Reference" "C82"
-			(at 349.9733 82.8303 90)
+			(at 385.7354 82.9393 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -63082,7 +63129,7 @@
 			)
 		)
 		(property "Value" "2uf"
-			(at 348.328 83.0449 90)
+			(at 384.0901 83.1539 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -63090,7 +63137,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 352.0684 69.5048 0)
+			(at 387.8305 69.6138 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -63099,7 +63146,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 351.1032 73.3148 0)
+			(at 386.8653 73.4238 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -63108,7 +63155,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 351.1032 73.3148 0)
+			(at 386.8653 73.4238 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -66141,76 +66188,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 712.6877 163.1702 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f18ac15d-cd5c-473f-8c53-73de1a32d94a")
-		(property "Reference" "R45"
-			(at 710.3499 164.4403 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "10k"
-			(at 710.3499 161.9003 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 710.9097 163.1702 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 712.6877 163.1702 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 712.6877 163.1702 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "0d03b10c-24f5-4403-bfe8-bf92c26a696f")
-		)
-		(pin "1"
-			(uuid "203d539d-3201-4867-8c0f-9e11b08afdaf")
-		)
-		(instances
-			(project "SBC"
-				(path "/deb7f9ba-b41e-497b-9625-f0e1fd12358a"
-					(reference "R45")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 432.4763 220.8915 0)
 		(unit 1)
@@ -67251,16 +67228,16 @@
 			(uuid "5c912e1f-72e6-4cbe-ba30-e382dfa55e1d")
 		)
 		(pin "7"
-			(uuid "cfe17e4a-a1d6-49dc-ba4f-caf9140d2345")
+			(uuid "cfe17e4a-a1d6-49dc-ba4f-caf9140d2347")
 		)
 		(pin "5"
-			(uuid "e1511933-650a-4822-a237-39b42b721279")
+			(uuid "e1511933-650a-4822-a237-39b42b72127b")
 		)
 		(pin "3"
 			(uuid "795096eb-8d24-4ab8-83f4-73a9c96fed7f")
 		)
 		(pin "6"
-			(uuid "c5757298-a05c-40a0-b5da-74f71d53970a")
+			(uuid "c5757298-a05c-40a0-b5da-74f71d53970c")
 		)
 		(pin "8"
 			(uuid "ecf42d23-6548-4823-a132-9a5b6f7edeb2")
@@ -67269,13 +67246,13 @@
 			(uuid "51261dee-e7c2-49e1-9fd1-e421471e4702")
 		)
 		(pin "4"
-			(uuid "c98886dc-2741-48e2-bb90-ad813e5e5ba0")
+			(uuid "c98886dc-2741-48e2-bb90-ad813e5e5ba1")
 		)
 		(pin "1"
 			(uuid "f3815493-7373-405a-81d1-3b02d8fcb775")
 		)
 		(pin "8"
-			(uuid "8b9cb9b5-996a-4745-9783-aa9bd9d28e04")
+			(uuid "8b9cb9b5-996a-4745-9783-aa9bd9d28e05")
 		)
 		(instances
 			(project "SBC"
@@ -67837,16 +67814,16 @@
 			(uuid "41f167be-e092-45dd-9877-3b4f3d2087ab")
 		)
 		(pin "7"
-			(uuid "cfe17e4a-a1d6-49dc-ba4f-caf9140d2346")
+			(uuid "cfe17e4a-a1d6-49dc-ba4f-caf9140d2348")
 		)
 		(pin "5"
-			(uuid "e1511933-650a-4822-a237-39b42b72127a")
+			(uuid "e1511933-650a-4822-a237-39b42b72127c")
 		)
 		(pin "3"
 			(uuid "e0fa7b7b-e7a0-4e67-9990-1cb579b49725")
 		)
 		(pin "6"
-			(uuid "c5757298-a05c-40a0-b5da-74f71d53970b")
+			(uuid "c5757298-a05c-40a0-b5da-74f71d53970d")
 		)
 		(pin "8"
 			(uuid "b694c5a4-8196-43fa-82a3-b0074d7aa1a8")
