@@ -16,7 +16,8 @@ fp-info-cache
 # Autorouter files (exported from Pcbnew)
 *.dsn
 *.ses
-*.zip*.lck
+*.zip
+*.lck
 *-bak
 #auto_saved_files#
 ~*
