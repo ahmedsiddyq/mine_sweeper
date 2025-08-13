@@ -517,13 +517,13 @@
   },
   "pcbnew": {
     "last_paths": {
-      "gencad": "",
+      "gencad": "SBC.cad",
       "idf": "",
       "netlist": "",
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "../motordriver2.dsn",
-      "step": "",
+      "step": "SBC.step",
       "svg": "",
       "vrml": ""
     },
