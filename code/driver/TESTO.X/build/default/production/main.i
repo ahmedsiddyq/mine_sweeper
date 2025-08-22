@@ -13,9 +13,113 @@
 
 
 
-# 1 "./header/haders.h" 1
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\stdint.h" 1 3
 
 
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\musl_xc8.h" 1 3
+# 5 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\stdint.h" 2 3
+# 22 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\stdint.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 127 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef unsigned long uintptr_t;
+# 142 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long intptr_t;
+# 158 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef signed char int8_t;
+
+
+
+
+typedef short int16_t;
+
+
+
+
+typedef __int24 int24_t;
+
+
+
+
+typedef long int32_t;
+
+
+
+
+
+typedef long long int64_t;
+# 188 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long long intmax_t;
+
+
+
+
+
+typedef unsigned char uint8_t;
+
+
+
+
+typedef unsigned short uint16_t;
+
+
+
+
+typedef __uint24 uint24_t;
+
+
+
+
+typedef unsigned long uint32_t;
+
+
+
+
+
+typedef unsigned long long uint64_t;
+# 229 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef unsigned long long uintmax_t;
+# 23 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\stdint.h" 2 3
+
+typedef int8_t int_fast8_t;
+
+typedef int64_t int_fast64_t;
+
+
+typedef int8_t int_least8_t;
+typedef int16_t int_least16_t;
+
+typedef int24_t int_least24_t;
+typedef int24_t int_fast24_t;
+
+typedef int32_t int_least32_t;
+
+typedef int64_t int_least64_t;
+
+
+typedef uint8_t uint_fast8_t;
+
+typedef uint64_t uint_fast64_t;
+
+
+typedef uint8_t uint_least8_t;
+typedef uint16_t uint_least16_t;
+
+typedef uint24_t uint_least24_t;
+typedef uint24_t uint_fast24_t;
+
+typedef uint32_t uint_least32_t;
+
+typedef uint64_t uint_least64_t;
+# 144 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\stdint.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\bits/stdint.h" 1 3
+typedef int16_t int_fast16_t;
+typedef int32_t int_fast32_t;
+typedef uint16_t uint_fast16_t;
+typedef uint32_t uint_fast32_t;
+# 145 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\stdint.h" 2 3
+# 8 "main.c" 2
 
 
 
@@ -25,8 +129,8 @@
 
 
 #pragma config CLKOUTEN = OFF
-#pragma config CSWEN = OFF
-#pragma config FCMEN = OFF
+#pragma config CSWEN = ON
+#pragma config FCMEN = ON
 
 
 #pragma config MCLRE = EXTMCLR
@@ -43,7 +147,7 @@
 
 
 #pragma config WDTCPS = WDTCPS_31
-#pragma config WDTE = ON
+#pragma config WDTE = OFF
 
 
 #pragma config WDTCWS = WDTCWS_7
@@ -94,16 +198,7 @@ extern double __fpnormalize(double);
 
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\stdlib.h" 1 3
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\musl_xc8.h" 1 3
-# 5 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\stdlib.h" 2 3
-
-
-
-
-
+# 10 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\stdlib.h" 3
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\features.h" 1 3
 # 11 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\stdlib.h" 2 3
 # 21 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\stdlib.h" 3
@@ -112,10 +207,6 @@ extern double __fpnormalize(double);
 typedef long int wchar_t;
 # 122 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef unsigned size_t;
-# 168 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef __int24 int24_t;
-# 204 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef __uint24 uint24_t;
 # 22 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\stdlib.h" 2 3
 
 int atoi (const char *);
@@ -188,91 +279,7 @@ extern void __builtin_software_breakpoint(void);
 
 
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\stdint.h" 1 3
-# 22 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\stdint.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\bits/alltypes.h" 1 3
-# 127 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef unsigned long uintptr_t;
-# 142 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long intptr_t;
-# 158 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef signed char int8_t;
 
-
-
-
-typedef short int16_t;
-# 173 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long int32_t;
-
-
-
-
-
-typedef long long int64_t;
-# 188 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long long intmax_t;
-
-
-
-
-
-typedef unsigned char uint8_t;
-
-
-
-
-typedef unsigned short uint16_t;
-# 209 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef unsigned long uint32_t;
-
-
-
-
-
-typedef unsigned long long uint64_t;
-# 229 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef unsigned long long uintmax_t;
-# 23 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\stdint.h" 2 3
-
-typedef int8_t int_fast8_t;
-
-typedef int64_t int_fast64_t;
-
-
-typedef int8_t int_least8_t;
-typedef int16_t int_least16_t;
-
-typedef int24_t int_least24_t;
-typedef int24_t int_fast24_t;
-
-typedef int32_t int_least32_t;
-
-typedef int64_t int_least64_t;
-
-
-typedef uint8_t uint_fast8_t;
-
-typedef uint64_t uint_fast64_t;
-
-
-typedef uint8_t uint_least8_t;
-typedef uint16_t uint_least16_t;
-
-typedef uint24_t uint_least24_t;
-typedef uint24_t uint_fast24_t;
-
-typedef uint32_t uint_least32_t;
-
-typedef uint64_t uint_least64_t;
-# 144 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\stdint.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\bits/stdint.h" 1 3
-typedef int16_t int_fast16_t;
-typedef int32_t int_fast32_t;
-typedef uint16_t uint_fast16_t;
-typedef uint32_t uint_fast32_t;
-# 145 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\stdint.h" 2 3
-# 5 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-Q_DFP/1.13.211/xc8\\pic\\include\\builtins.h" 2 3
 
 
 #pragma intrinsic(__nop)
@@ -15800,131 +15807,162 @@ __attribute__((__unsupported__("The READTIMER" "0" "() macro is not available wi
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-Q_DFP/1.13.211/xc8\\pic\\include\\xc.h" 2 3
-# 67 "./header/haders.h" 2
-# 7 "main.c" 2
-# 43 "main.c"
+# 72 "main.c" 2
+# 84 "main.c"
 volatile uint8_t i2c_byte = 0;
 
 
+
 void Initialize(void);
+void clock_init(void);
 void Timer0_Init(void);
 void I2C_Slave_Init(uint8_t address);
 
 
-void main(void)
+
+void set_duty(uint16_t duty_rw)
+
 {
-    Initialize();
 
-    while (1)
-    {
 
-        LATAbits.LATA3 = 0;
-        _delay((unsigned long)((500)*(48000000UL/4000.0)));
-        LATAbits.LATA3 = 0;
-        _delay((unsigned long)((500)*(48000000UL/4000.0)));
+duty_rw = (uint16_t)(((uint32_t)duty_rw * 4 * 256) / 100);
+PWM3DCH = duty_rw >> 2;
+    PWM3DCL = (PWM3DCL & 0x3F) | ((duty_rw & 0x03) << 6);
+# 117 "main.c"
+}
 
-    }
+void set_pwm_frq(uint16_t frq)
+{
+
+    T2PR=255;
+    set_duty(1);
+}
+void pwm_int(uint16_t pwm_frq)
+{
+TRISAbits.TRISA3 = 1;
+PWM3CON=0;
+T2PR =255;
+PWM3DCH = 0x14;
+PWM3DCL = 0x40;
+set_pwm_frq(pwm_frq);
+TMR2IF=0;
+TMR2IE=0;
+T2CLKCON=1;
+T2CONbits.T2CKPS=0b101;
+T2CONbits.T2ON=1;
+TRISAbits.TRISA3 = 0;
+PWM3CON = 0x80;
+RA3PPS = 0x07;
+
 }
 
 
+
+uint16_t x=1;
+void main(void)
+{
+
+    Initialize();
+   GIE=0;
+    while(1)
+    {
+
+      set_duty(x);
+      x++;
+     _delay((unsigned long)((100)*(48000000UL/4000.0)));
+     if(x>99)
+     {x=1;}
+     if(x<1)
+     {x=99;}
+    }
+}
 void Initialize(void)
 {
 
-    OSCEN = 0b01000000;
-    OSCCON1 = 0b00000000;
-    OSCFRQ = 0b00000111;
+      ANSELC=0;
+      ANSELB=0;
+      ANSELA=0;
 
 
-    TRISCbits.TRISC2 = 0;
-    TRISBbits.TRISB5 = 0;
-    TRISCbits.TRISC0 = 0;
-    TRISBbits.TRISB4 = 0;
-    TRISAbits.TRISA1 = 0;
+    ANSELAbits.ANSELA3 = 0;
 
 
-    TRISAbits.TRISA0 = 1;
+    TRISAbits.TRISA3 = 0;
+
+    TRISCbits.TRISC4=1;
+    TRISCbits.TRISC3=1;
 
 
-    TRISCbits.TRISC1 = 1;
-    TRISBbits.TRISB3 = 1;
-    TRISAbits.TRISA2 = 1;
-    TRISCbits.TRISC4 = 1;
-    TRISAbits.TRISA4 = 1;
-    TRISCbits.TRISC5 = 1;
-    TRISCbits.TRISC3 = 1;
-    TRISAbits.TRISA5 = 1;
-    TRISCbits.TRISC6 = 1;
-
-
-    TRISCbits.TRISC7 = 1;
-    TRISBbits.TRISB7 = 1;
-
-
-    TRISBbits.TRISB6 = 0;
-
-
-    LATCbits.LATC2 = 1;
-    LATBbits.LATB5 = 1;
-    LATCbits.LATC0 = 0;
-    LATBbits.LATB4 = 0;
-    LATAbits.LATA1 = 0;
-    LATAbits.LATA3 = 0;
-
-
-    INTCONbits.GIE = 1;
-    INTCONbits.PEIE = 1;
-
-
+    clock_init();
     Timer0_Init();
-    I2C_Slave_Init(0x0D);
+    I2C_Slave_Init(0x13);
+    pwm_int(1000);
+
+    PEIE = 1;
+    GIE = 1;
+    IPEN=0;
+}
+void I2C_Slave_Init(uint8_t address)
+{
+
+    SSP1CON1 = 0b00111110;
+    SSP1CON2 = 0x00;
+    SSP1CON3 = 0b00000000;
+
+    SSP1ADD = (uint8_t) (0x13<<1);
+    SSP1MSK = 0xFF;
+
+
+    SSP1DATPPS = 0x14;
+    RC3PPS = 0x0D;
+    RC4PPS = 0x0E;
+    SSP1CLKPPS = 0x13;
+
+
+    PIR3bits.SSP1IF = 0;
+    PIE3bits.BCL1IE = 1;
+    PIE3bits.SSP1IE = 1;
 }
 
 
 void Timer0_Init(void)
 {
-
     T0CON0 = 0b10000000;
-    T0CON1 = 0b01000110;
-    TMR0L = 131;
+    T0CON1 = 0b01111010;
+    TMR0H = 131;
     PIR0bits.TMR0IF = 0;
     PIE0bits.TMR0IE = 1;
+
 }
-
-
-void I2C_Slave_Init(uint8_t address)
+void clock_init(void)
 {
-    SSP1CON1 = 0b00110110;
-    SSP1CON2 = 0x00;
-    SSP1CON3 = 0b00000000;
+    OSCCON1=0x60;
+    OSCFRQbits.HFFRQ=0b0111;
+    OSCEN=0x40;
 
-    SSP1ADD = (address << 1);
-    SSP1MSK = 0xFE;
 
-    PIR3bits.SSP1IF = 0;
-    PIE3bits.SSP1IE = 1;
-    PIE3bits.BCL1IE = 1;
 }
 
 
 void __attribute__((picinterrupt(("")))) ISR(void)
 {
+    if(PIR0bits.TMR0IF)
 
-    if (PIR0bits.TMR0IF)
     {
-        PIR0bits.TMR0IF = 0;
-        TMR0L = 131;
-
 
     }
 
 
     if (PIR3bits.SSP1IF)
     {
-        if (SSP1STATbits.R_W)
+
+
+         if (SSP1STATbits.R_W)
         {
             if (!SSP1STATbits.BF)
             {
                 SSP1BUF = 'a';
+
             }
         }
         else

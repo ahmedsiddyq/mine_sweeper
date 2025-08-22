@@ -1,201 +1,184 @@
 /*
  * File:   main.c
- * Author: morga
- *
- * Created on July 27, 2025, 1:02 AM
+ * Author: Ahmed "morga"
+ * Created on July 27, 2025
  */
- 
+
 #include "header/haders.h"
+#include <xc.h>
 #include <stdint.h>
 
-#define _XTAL_FREQ 48000000 // Adjust to your clock
-    
-// ==== motor con Pins  ====
-#define Motor1_OFF     PORTCbits.RC2
-#define Motor2_OFF     PORTBbits.RB6
-#define M1_S1          PORTCbits.RC0
-#define M2_S1          PORTBbits.RB4
-#define killsw         PORTAbits.RA0
-#define PIC_PWM        PORTAbits.RA1
+#define _XTAL_FREQ 48000000UL    // 48 MHz internal oscillator
+#define TMR0_PRELOAD 131          // Timer0 preload for 375 Hz
 
+// =================== PIN DEFINITIONS ===================
+// Motor control
+#define M1_OFF      LATCbits.LATC2
+#define M2_OFF      LATBbits.LATB5
+#define M1_S1       LATCbits.LATC0
+#define M2_S1       LATBbits.LATB4
+#define KILL_SW     PORTAbits.RA0
+#define PIC_PWM     LATAbits.LATA1
 
+// Sense pins
+#define ERR1        PORTCbits.RC1
+#define ERR2        PORTBbits.RB3
+#define M1_CUR_SEN  PORTAbits.RA2
+#define M2_CUR_SEN  PORTCbits.RC4
+#define VOLT_SEN    PORTAbits.RA4
+#define A1          PORTCbits.RC5
+#define A2          PORTCbits.RC3
+#define B1          PORTAbits.RA5
+#define B2          PORTCbits.RC6
 
-// ====  sense Pins  ====
-#define error1          PORTCbits.RC1
-#define error2          PORTBbits.RB5
-#define M1_CURRENT_SEN  PORTAbits.RA2
-#define M2_CURRENT_SEN  PORTCbits.RC4
-#define VOLTAGE_SEN     PORTAbits.RA4
-#define A1              PORTCbits.RC5
-#define A2              PORTCbits.RC3
-#define B1              PORTAbits.RA5
-#define B2              PORTCbits.RC6
+// I2C pins
+#define SDA_PIN     TRISCbits.TRISC7
+#define SCL_PIN     TRISBbits.TRISB7
 
+// LED indicator
+#define LED         LATAbits.LATA3
 
-// ====  data pins  ====
-#define SDA             PORTCbits.RC7 
-#define SCL             PORTBbits.RB7
-#define LED             PORTBbits.RB6
-#define i2c_adress      13
+// I2C settings
+#define I2C_ADDRESS 0x0D   // 7-bit address
+volatile uint8_t i2c_byte = 0;
 
+// =================== FUNCTION PROTOTYPES ===================
+void Initialize(void);
+void Timer0_Init(void);
+void I2C_Slave_Init(uint8_t address);
 
+// =================== MAIN ===================
+void main(void)
+{
+    Initialize();
 
-// Setup I/O Pins
-void Initialize(void) {
-    
-     OSCEN=0b01000000;
-     OSCCON1=0b00000000;
-     OSCFRQ=0b00000111;
-     
-     
-    //  I2C Setup pin 
-    RC7PPS     = 0x08;    // SDA1 output
-    RB7PPS     = 0x07;    // SCL1 output 
-    SSP1DATPPS = 0b00010111;    // SDA1 input 
-    SSP1CLKPPS = 0b00001111;    // SCL1 input
-    
-    RA1PPS     = 0x03;    // CCP1 output 
+    while (1)
+    {
+        
+        LED = 0;
+        __delay_ms(500);
+        LED = 0;
+        __delay_ms(500);
+        
+    }
+}
 
-    // Set motor control pins as outputs
-    TRISCbits.TRISC2 = 0;  // Motor1_OFF
-    TRISBbits.TRISB6 = 0;  // Motor2_OFF
-    TRISCbits.TRISC0 = 0;  // M1_S1
-    TRISBbits.TRISB4 = 0;  // M2_S1
-    TRISAbits.TRISA1 = 0;  // PIC_PWM
-    
-    // Set kill switch as input
-    TRISAbits.TRISA0 = 1;  // killsw
-    
-    // Set sense pins as inputs
-    TRISCbits.TRISC1 = 1;  // error1
-    TRISBbits.TRISB5 = 1;  // error2
-    TRISAbits.TRISA2 = 1;  // M1_CURRENT_SEN
-    TRISCbits.TRISC4 = 1;  // M2_CURRENT_SEN
-    TRISAbits.TRISA4 = 1;  // VOLTAGE_SEN
-    TRISCbits.TRISC5 = 1;  // A1
-    TRISCbits.TRISC3 = 1;  // A2
-    TRISAbits.TRISA5 = 1;  // B1
-    TRISCbits.TRISC6 = 1;  // B2
-    
-    // Set data pins
-    TRISCbits.TRISC7 = 1;  // SDA (I2C - bidirectional)
-    TRISBbits.TRISB7 = 0;  // SCL (I2C clock - output)
-    TRISBbits.TRISB6 = 0;  // LED (output)
-    
-    // Initialize output states
-    Motor1_OFF = 1;       // Start with motors off
-    Motor2_OFF = 1;
+// =================== INITIALIZATION ===================
+void Initialize(void)
+{
+    // Clock: 48 MHz HFINTOSC
+    OSCEN   = 0b01000000;  // Enable HFINTOSC
+    OSCCON1 = 0b00000000;  // HFFRQ from OSCFRQ
+    OSCFRQ  = 0b00000111;  // 48 MHz
+
+    // Motor control outputs
+    TRISCbits.TRISC2 = 0;
+    TRISBbits.TRISB5 = 0;
+    TRISCbits.TRISC0 = 0;
+    TRISBbits.TRISB4 = 0;
+    TRISAbits.TRISA1 = 0;
+
+    // Kill switch input
+    TRISAbits.TRISA0 = 1;
+
+    // Sense inputs
+    TRISCbits.TRISC1 = 1;
+    TRISBbits.TRISB3 = 1;
+    TRISAbits.TRISA2 = 1;
+    TRISCbits.TRISC4 = 1;
+    TRISAbits.TRISA4 = 1;
+    TRISCbits.TRISC5 = 1;
+    TRISCbits.TRISC3 = 1;
+    TRISAbits.TRISA5 = 1;
+    TRISCbits.TRISC6 = 1;
+
+    // I2C pins as inputs (open-drain)
+    SDA_PIN = 1;
+    SCL_PIN = 1;
+
+    // LED output
+    TRISBbits.TRISB6 = 0;
+
+    // Initial states
+    M1_OFF = 1;
+    M2_OFF = 1;
     M1_S1 = 0;
     M2_S1 = 0;
     PIC_PWM = 0;
-    LED = 0;              // Start with LED off
-    
-    RCONbits.IPEN = 1;  // Enable interrupt priority
-    INTCONbits.GIEH = 1;  // Enable high priority interrupts
-    INTCONbits.GIEL = 1;  // Enable low priority interrupts
-    INTCONbits.PEIE = 1;  // Enable peripheral interrupts
+    LED = 0;
 
-    
-//adc_init();
- timerint();
- I2C_Init();
+    // Enable global & peripheral interrupts
+    INTCONbits.GIE  = 1;
+    INTCONbits.PEIE = 1;
+
+    // Initialize peripherals
+    Timer0_Init();
+    I2C_Slave_Init(I2C_ADDRESS);
 }
 
-//timer 1  make  375 event at seconed  to bisc function 
-void timerint(){
-   
-    T0CON0=0b10000000;
-    T0CON1=0b01111010;
-    T0CON0bits.T016BIT = 0;   //  //to make 8-bit timer with comper  function
-    T0CON1bits.T0ASYNC = 1;   // chose the Prescaler
-    T0CON1bits.T0CKPS = 0b1010; // Prescaler 1:1024 to git 15625 hz
-    TMR0L=0;
-    TMR0H=131;// ser autorelod register comperd to low regiseter timer0
-        
-}
-/*
-void adc_init()
+// =================== TIMER0 ===================
+void Timer0_Init(void)
 {
- ADCON1=0b11010011;//
- ADACT=0b00000010;
-   
+    // Timer0: 8-bit, prescaler 1:256, 375 Hz
+    T0CON0 = 0b10000000;       // T0EN = 1, 8-bit
+    T0CON1 = 0b01000110;       // Fosc/4, prescaler 1:256, sync
+    TMR0L  = TMR0_PRELOAD;     // preload
+    PIR0bits.TMR0IF = 0;       // clear interrupt flag
+    PIE0bits.TMR0IE = 1;       // enable interrupt
 }
- */
-void __interrupt(irq(TMR0), low_priority) TMR0_ISR(void)
+
+// =================== I2C SLAVE ===================
+void I2C_Slave_Init(uint8_t address)
 {
-  
-    //send voltge 
-    //send current
-    //send semce
-    //blink
-    PIR0bits.TMR0IF = 0; //set timer intrrupt off
+    SSP1CON1 = 0b00110110;        // I2C slave, 7-bit, enable SSP
+    SSP1CON2 = 0x00;
+    SSP1CON3 = 0b00000000;
 
-}
-void I2C_Init() {
-    
-    /* PPS setting for using RB1 as SCL */
-    SSP1CLKPPS = 0x09;
-    RB1PPS = 0x0F;
-    /* PPS setting for using RB2 as SDA */
-    SSP1DATPPS = 0x0A;
-    RB2PPS = 0x10;
-    
-    
-    /* Set pins RB1 and RB2 as Digital */
-    ANSELBbits.ANSELB1 = 0;
-    ANSELBbits.ANSELB2 = 0;
-    /* Set pull-up resistors for RB1 and RB2 */
-    WPUBbits.WPUB1 = 1;
-    WPUBbits.WPUB2 = 1;
-    /* Set open-drain mode for RB1 and RB2 */
-    ODCONBbits.ODCB1 = 1;
-    ODCONBbits.ODCB2 = 1;
+    SSP1ADD = (address << 1);     // shift for 7-bit address
+    SSP1MSK = 0xFE;               // mask all bits
 
-    /* I2C Host Mode: Clock = F_OSC / (4 * (SSP1ADD + 1)) */
-    SSP1CON0=0b1;
-    /* Set the baud rate divider to obtain the I2C clock at 100000 Hz*/
-    SSP1ADD = 0x9F;
-    
-    
-
-    SSP1STAT = 0x80;            // Slew rate control disabled (100kHz)
-    SSP1CON1 = 0x36;            // I²C Slave mode, 7-bit address, enable SSP
-    SSP1CON2 = 0x01;            // Clock stretch enabled
-    SSP1ADD  = i2c_adress << 1;    // Load slave address
-    SSP1IF = 0;                 // Clear interrupt flag
-    SSP1IE = 1;                 // Enable MSSP interrupt
-    PEIE = 1;                   // Enable peripheral interrupts
-    GIE = 1;                    // Enable global interrupts
+    PIR3bits.SSP1IF = 0;
+    PIE3bits.SSP1IE = 1;          // enable MSSP interrupt
+    PIE3bits.BCL1IE = 1;          // enable bus collision interrupt
 }
 
-void void __interrupt(irq(), high_priority) TMR0_ISR(void){
-    if (SSP1IE && SSP1IF) {
-        if (!SSP1STATbits.D_nA && !SSP1STATbits.R_nW) {
-            // Master Write -> receive data
-            uint8_t I2C_Rdata = SSP1BUF;   // Dummy read to clear BF
-            while (!BF);              // Wait until data is received
-            I2C_Rdata = SSP1BUF;           // Actual data from master
-            // Do something with data (e.g., store, toggle LED)
-        }
-        else if (!SSP1STATbits.D_nA && SSP1STATbits.R_nW) {
-            // Master Read -> send data
-            uint8_t outData = 0xAB;   // Example response
-            SSP1BUF = outData;
-        }
-        SSP1IF = 0; // Clear MSSP interrupt
-    }
-    
-     //send voltge 
-     //send current
-     //send semce
-     //blink
-}
-
-void main(void) {
-    Initialize();
-    while(1)
+// =================== ISR ===================
+void __interrupt() ISR(void)
+{
+    // Timer0 interrupt
+    if (PIR0bits.TMR0IF)
     {
-        
-    
+        PIR0bits.TMR0IF = 0;
+        TMR0L = TMR0_PRELOAD;  // reload for exact 375 Hz
+
+        // Place 375 Hz tasks here
+    }
+
+    // I2C MSSP interrupt
+    if (PIR3bits.SSP1IF)
+    {
+        if (SSP1STATbits.R_W) // Master reading
+        {
+            if (!SSP1STATbits.BF)
+            {
+                SSP1BUF = 'a'; // example response
+            }
+        }
+        else // Master writing
+        {
+            i2c_byte = SSP1BUF;
+        }
+
+        // Clear overflow/collision flags & release clock
+        SSP1CON1bits.CKP = 1;
+        if (SSP1CON1bits.SSPOV) SSP1CON1bits.SSPOV = 0;
+        if (SSP1CON1bits.WCOL)  SSP1CON1bits.WCOL  = 0;
+        PIR3bits.SSP1IF = 0;
+    }
+
+    // I2C Bus Collision
+    if (PIR3bits.BCL1IF)
+    {
+        PIR3bits.BCL1IF = 0;
     }
 }
